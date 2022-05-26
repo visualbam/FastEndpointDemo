@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <NoWarn>CA2016;RCS1090;CS8618;IDE1006</NoWarn>
+        <UserSecretsId>e3f1b5f6-4d0f-436e-ac23-65ad51073ed4</UserSecretsId>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Client\FastEndpointDemo.Client.csproj" />
+    <ProjectReference Include="..\Shared\FastEndpointDemo.Shared.csproj" />
+  </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Article Src\**" />
+        <Content Remove="Article Src\**" />
+        <EmbeddedResource Remove="Article Src\**" />
+        <None Remove="Article Src\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FastEndpoints" Version="4.2.0" />
+        <PackageReference Include="FastEndpoints.Security" Version="4.2.0" />
+        <PackageReference Include="FastEndpoints.Swagger" Version="4.2.0" />
+        <PackageReference Include="FluentValidation" Version="11.0.1" />
+        <PackageReference Include="MongoDB.Entities" Version="20.26.3" />
+        <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    </ItemGroup>
+
+
+</Project>
